@@ -14,8 +14,8 @@ export default {
       type: String,
       required: true,
     },
-    primary: {
-      type: Boolean,
+    type: {
+      type: String,
       default: false,
     },
     size: {
@@ -36,8 +36,9 @@ export default {
     return {
       classes: computed(() => ({
         'storybook-button': true,
-        'storybook-button--primary': props.primary,
-        'storybook-button--secondary': !props.primary,
+        'storybook-button--primary': props.type === 'primary',
+        'storybook-button--secondary': props.type  === 'secondary',
+        'storybook-button--tertiary': props.type  === 'tertiary',
         [`storybook-button--${props.size || 'medium'}`]: true,
       })),
       style: computed(() => ({

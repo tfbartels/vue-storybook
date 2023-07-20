@@ -22,16 +22,25 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/vue/writing-stories/args
 export const Primary = {
   args: {
-    primary: true,
+    type: 'primary',
     label: 'Button',
   },
 };
 
 export const Secondary = {
   args: {
+    type: 'secondary',
     label: 'Button',
   },
 };
+
+export const Tertiary = {
+  args: {
+    type: 'tertiary',
+    label: 'Button',
+  },
+};
+
 
 export const Large = {
   args: {
